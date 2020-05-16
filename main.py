@@ -55,6 +55,14 @@ def add_employee(add_documents, add_shelf):
         directories[add_in_shelf].append(document_number)
         print(f'Сотрудник {employee_name} добавлен в базу данных')
 
+def show_names():
+  """Проверка на KeyError"""
+  for document in documents:
+    try:
+      print(f"{document.get('name')}")
+    except KeyError:
+      print(f"no name")
+
 def main():
     while True:
         user_input = input('Введите команду: ')
