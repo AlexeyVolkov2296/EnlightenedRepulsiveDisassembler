@@ -59,7 +59,7 @@ def show_names():
   """Проверка на KeyError"""
   for document in documents:
     try:
-      print(f"{document.get('name')}")
+      print(f"{document['name']}")
     except KeyError:
       print(f"no name")
 
